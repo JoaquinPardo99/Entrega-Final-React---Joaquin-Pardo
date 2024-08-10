@@ -1,15 +1,12 @@
-// src/components/ItemDetailContainer.jsx
 import React from "react";
 import { useParams } from "react-router-dom";
-import products from "../data/products"; // Asegúrate de importar los productos
+import products from "../data/products";
 
 function ItemDetailContainer() {
   const { id } = useParams();
 
-  // Buscar el producto por su ID en el array de productos
   const item = products.find((product) => product.id === id);
 
-  // Si no se encuentra el producto, mostramos un mensaje de error
   if (!item) {
     return <div>Producto no encontrado</div>;
   }
