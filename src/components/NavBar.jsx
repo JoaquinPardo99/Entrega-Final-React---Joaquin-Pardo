@@ -1,21 +1,50 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import React from "react";
+import { Link } from "react-router-dom";
+import CartWidget from "./CartWidget";
 
+function NavBar() {
+  return (
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+      <div className="container-fluid d-flex justify-content-between">
+        <Link className="navbar-brand fs-3" to="/">
+          Plastico Records
+        </Link>
+        <div
+          className="collapse navbar-collapse justify-content-between"
+          id="navbarNav"
+        >
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to="/category/ambient">
+                Ambient
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/category/electro">
+                Electro
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/category/techno">
+                Techno
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/category/house">
+                House
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/category/minimal">
+                Minimal
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <CartWidget /> {}
+      </div>
+    </nav>
+  );
+}
 
-import {CartWidget} from "./CartWidget";
-export const NavBar = () => {
-    return (
-    <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Plástico Records</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#inicio">Inicio</Nav.Link>
-            <Nav.Link href="#catalogo">Catálogo</Nav.Link>
-            <Nav.Link href="#contacto">Contacto</Nav.Link>
-          </Nav>
-        < CartWidget />
-        </Container>
-    </Navbar>
-    );
-};
+export default NavBar;

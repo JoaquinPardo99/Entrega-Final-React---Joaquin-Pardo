@@ -2,3 +2,19 @@ span {
   color: white;
   padding-left: 0.4rem;
 }
+
+body {
+  background-color: black;
+  color: #fff;
+}
+
+.card {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.nav-link,
+.navbar-brand {
+  color: #fff;
+}

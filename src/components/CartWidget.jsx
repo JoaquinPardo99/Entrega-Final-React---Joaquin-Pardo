@@ -1,10 +1,11 @@
-import cart from '../assets/bag.jpg'
+import React from "react";
 
-export const CartWidget = () => {
-    return(
-    <>
-    <img src={cart} height={24}/>
-    <span>4</span>
-    </>
-    );
+function CartWidget() {
+  return (
+    <button className="btn btn-outline-success" type="button">
+      <i className="bi bi-cart"></i> Carrito
+    </button>
+  );
 }
+
+export default CartWidget;
