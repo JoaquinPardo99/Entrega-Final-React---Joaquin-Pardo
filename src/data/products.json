@@ -1,0 +1,107 @@
+[
+  {
+    "id": "1",
+    "name": "Aphex Twin - Selected Ambient Works 85-92 LP",
+    "description": "Apollo",
+    "category": "Ambient",
+    "image": "https://upload.wikimedia.org/wikipedia/en/8/82/Selected_Ambient_Works_85-92.png"
+  },
+  {
+    "id": "2",
+    "name": "Hexagon Seam - Foray EP",
+    "description": "Altered Sense",
+    "category": "Ambient",
+    "image": "https://i.discogs.com/WK7ony638osjlVApm0g7EV0EuO1TB1OW7_dq-lRXGf0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxODI1/NTAyLTE2NDM2Mjg5/MjItMjg0Ny5qcGVn.jpeg"
+  },
+  {
+    "id": "3",
+    "name": "Xyn - Output Square EP",
+    "description": "Component Records",
+    "category": "Ambient",
+    "image": "https://f4.bcbits.com/img/a0228979093_10.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Carl Finlow - Desequence EP",
+    "description": "20:20 Vision",
+    "category": "Electro",
+    "image": "https://imagescdn.juno.co.uk/full/CS851126-01A-BIG.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Datassette - Mannequin On The Run EP",
+    "description": "Rebel Intelligence",
+    "category": "Electro",
+    "image": "https://f4.bcbits.com/img/a2463265455_10.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Konerytmi - Muotiviesti EP",
+    "description": "Eudemonia",
+    "category": "Electro",
+    "image": "https://www.deejay.de/images/xl/9/2//1000592b.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Architectural - Love Drums Massacre EP",
+    "description": "Non Series",
+    "category": "Techno",
+    "image": "https://f4.bcbits.com/img/a3666553928_65"
+  },
+  {
+    "id": "8",
+    "name": "Connective Zone - Qwerty EP",
+    "description": "Delsin",
+    "category": "Techno",
+    "image": "https://f4.bcbits.com/img/a1516913691_65"
+  },
+  {
+    "id": "9",
+    "name": "Pyramidal Decode - Hasta La Muerte EP",
+    "description": "Semantica Records",
+    "category": "Techno",
+    "image": "https://f4.bcbits.com/img/a1787863182_65"
+  },
+  {
+    "id": "10",
+    "name": "RBDP - Acid R EP",
+    "description": "Post Pluto",
+    "category": "House",
+    "image": "https://static.common-ground.io/shops/37/releases/11611942/img-d-b7-nMujdks.jpeg"
+  },
+  {
+    "id": "11",
+    "name": "Spray - Witches Drinner EP",
+    "description": "Craigie Knowes",
+    "category": "House",
+    "image": "https://f4.bcbits.com/img/a0685877225_10.jpg"
+  },
+  {
+    "id": "12",
+    "name": "Wlad - Back To The Rave EP",
+    "description": "House Puff",
+    "category": "House",
+    "image": "https://www.deejay.de/images/xl/8/2//982882b.jpg"
+  },
+  {
+    "id": "13",
+    "name": "Lapucci First Contact EP",
+    "description": "Burbi",
+    "category": "Minimal",
+    "image": "https://i.discogs.com/KmlvJ6fhuih8tHNjOVUXQw0gnQoDQNcLYItPLzDxHCU/rs:fit/g:sm/q:90/h:584/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgyODYx/NzMtMTQ4MDQzMDY5/Ni00NTA1LmpwZWc.jpeg"
+  },
+  {
+    "id": "14",
+    "name": "Shinichi Atobe - Ongaku 1 EP",
+    "description": "DDS",
+    "category": "Minimal",
+    "image": "https://static.ra.co/images/reviews/2024/shinichi-atobe-ongaku-1-cover.jpg"
+  },
+  {
+    "id": "15",
+    "name": "Stekke - Cosmopolitan EP",
+    "description": "Chez Panthere",
+    "category": "Minimal",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG0I_0NMK8zImatTK3pL6eldr9bdg1B-bzlw&s"
+  }
+]
