@@ -19,7 +19,8 @@
 
 1. **Clona el repositorio** en tu máquina local:
 
-   git clone https://github.com/tu-usuario/plastico-records.git
+   git clone
+
    cd plastico-records
 
 2. **Instala las dependencias del proyecto**:
