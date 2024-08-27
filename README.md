@@ -44,3 +44,4 @@
 - **React Router DOM**: Manejo de rutas dentro de la aplicación.
 - **Firebase**: Backend para almacenar productos y órdenes de compra.
 - **Bootstrap**: Estilización y diseño responsivo.
+- **react-toastify**: Notificaciones amigables en la UI.
