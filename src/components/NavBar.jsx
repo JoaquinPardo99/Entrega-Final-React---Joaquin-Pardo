@@ -5,43 +5,51 @@ import CartWidget from "./CartWidget";
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3">
-      <div className="container-fluid d-flex justify-content-between">
+      <div className="container-fluid">
         <Link className="navbar-brand fs-3" to="/">
           Plastico Records
         </Link>
-        <div
-          className="collapse navbar-collapse justify-content-between"
-          id="navbarNav"
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <ul className="navbar-nav">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/category/ambient">
+              <Link className="nav-link" to="/category/Ambient">
                 Ambient
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/category/electro">
+              <Link className="nav-link" to="/category/Electro">
                 Electro
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/category/techno">
+              <Link className="nav-link" to="/category/Techno">
                 Techno
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/category/house">
+              <Link className="nav-link" to="/category/House">
                 House
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/category/minimal">
+              <Link className="nav-link" to="/category/Minimal">
                 Minimal
               </Link>
             </li>
           </ul>
+          <CartWidget /> {}
         </div>
-        <CartWidget /> {}
       </div>
     </nav>
   );
