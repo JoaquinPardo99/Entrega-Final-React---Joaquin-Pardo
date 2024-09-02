@@ -32,9 +32,9 @@ function App() {
               <Route path="/thank-you" element={<ThankYou />} />
             </Routes>
           </div>
-          <Footer /> {}
+          <Footer />
         </div>
-        <ToastContainer /> {}
+        <ToastContainer />
       </Router>
     </CartProvider>
   );

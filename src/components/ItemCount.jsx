@@ -4,24 +4,40 @@ import { toast } from "react-toastify";
 
 function ItemCount({ product }) {
   const [count, setCount] = useState(1);
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, getItemQuantity } = useContext(CartContext);
 
   const handleAddToCart = () => {
-    addToCart({ ...product, quantity: count });
-    setCount(1);
-    toast.success(`${product.title} agregado al carrito!`, {
-      position: "top-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+    const currentQuantity = getItemQuantity(product.id);
+    if (count + currentQuantity <= product.stock) {
+      addToCart({ ...product, quantity: count });
+      toast.success(`${product.title} agregado al carrito!`, {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      setCount(1);
+    } else {
+      toast.error(
+        `No puedes agregar más de ${product.stock} unidades de este producto.`,
+        {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        }
+      );
+    }
   };
 
   const handleIncrease = () => {
-    if (count < product.stock) {
+    if (count + getItemQuantity(product.id) < product.stock) {
       setCount(count + 1);
     }
   };
@@ -34,7 +50,7 @@ function ItemCount({ product }) {
 
   return (
     <div>
-      <p>Stock disponible: {product.stock}</p> {}
+      <p>Stock disponible: {product.stock}</p>{" "}
       <div className="d-flex align-items-center mb-2">
         <button className="btn btn-outline-primary" onClick={handleDecrease}>
           -

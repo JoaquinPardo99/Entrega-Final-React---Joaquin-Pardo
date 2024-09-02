@@ -7,20 +7,38 @@ import { db } from "../main";
 function Cart() {
   const { cart, removeFromCart, clearCart } = useContext(CartContext);
   const [buyer, setBuyer] = useState({ name: "", phone: "", email: "" });
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
-
-  const handleRemove = (id) => {
-    removeFromCart(id);
-  };
 
   const handleInputChange = (e) => {
     setBuyer({ ...buyer, [e.target.name]: e.target.value });
   };
 
+  const validateForm = () => {
+    let formErrors = {};
+
+    if (!buyer.name.trim()) {
+      formErrors.name = "El nombre es obligatorio.";
+    }
+
+    if (!buyer.phone.trim() || isNaN(buyer.phone)) {
+      formErrors.phone = "El teléfono solo debe contener números.";
+    }
+
+    if (
+      !buyer.email.includes("@") ||
+      !buyer.email.includes(".") ||
+      buyer.email.indexOf("@") > buyer.email.lastIndexOf(".")
+    ) {
+      formErrors.email = "El email no es válido.";
+    }
+
+    setErrors(formErrors);
+    return Object.keys(formErrors).length === 0;
+  };
+
   const handleCheckout = async () => {
-    if (!buyer.name || !buyer.phone || !buyer.email) {
-      setError("Por favor, completa todos los campos.");
+    if (!validateForm()) {
       return;
     }
 
@@ -40,7 +58,9 @@ function Cart() {
       navigate("/thank-you");
     } catch (err) {
       console.error("Error al finalizar la compra:", err);
-      setError("Ocurrió un error al procesar la compra. Inténtalo de nuevo.");
+      setErrors({
+        general: "Ocurrió un error al procesar la compra. Inténtalo de nuevo.",
+      });
     }
   };
 
@@ -51,8 +71,6 @@ function Cart() {
 
   return (
     <div className="container mt-4 mb-5">
-      {" "}
-      {}
       <h2>Carrito</h2>
       {cart.length === 0 ? (
         <p>No hay productos en el carrito.</p>
@@ -100,6 +118,7 @@ function Cart() {
                 onChange={handleInputChange}
                 required
               />
+              {errors.name && <div className="text-danger">{errors.name}</div>}
             </div>
             <div className="mb-3">
               <label className="form-label">Teléfono</label>
@@ -111,6 +130,9 @@ function Cart() {
                 onChange={handleInputChange}
                 required
               />
+              {errors.phone && (
+                <div className="text-danger">{errors.phone}</div>
+              )}
             </div>
             <div className="mb-3">
               <label className="form-label">Email</label>
@@ -122,8 +144,13 @@ function Cart() {
                 onChange={handleInputChange}
                 required
               />
+              {errors.email && (
+                <div className="text-danger">{errors.email}</div>
+              )}
             </div>
-            {error && <div className="alert alert-danger">{error}</div>}
+            {errors.general && (
+              <div className="alert alert-danger">{errors.general}</div>
+            )}
             <button
               type="button"
               className="btn btn-success"

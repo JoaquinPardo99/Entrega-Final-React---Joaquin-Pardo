@@ -29,7 +29,7 @@
 
 3. **Inicia la aplicación en modo desarrollo:**:
 
-   npm start
+   npm run dev
 
 ## Uso
 
